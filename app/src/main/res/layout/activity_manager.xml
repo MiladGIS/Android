@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManagerActivity">
+
+
+    <TextView
+        android:id="@+id/textViewLoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Your Location"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/locName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLoc"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center_vertical|center"
+        android:hint="Enter Location Name"
+        android:inputType="text"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locName"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="X Coordinate"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewX"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center_vertical|center"
+        android:hint="Enter X Coordinate"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/textViewY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editX"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Y Coordinate"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewY"
+        android:layout_marginTop="5dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:gravity="center_vertical|center"
+        android:hint="Enter Y Coordinate"
+        android:inputType="number|numberDecimal"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id = "@+id/wifitxt"
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:layout_above = "@+id/scanBtn"
+        android:layout_below="@id/editY"/>
+
+
+    <Button
+        android:id="@+id/scanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="69dp"
+        android:backgroundTint="#154865"
+        android:textColor="#2F3F4F"
+        android:background="@drawable/round_button"
+        android:onClick="scanWiFi"
+        android:text="Scan"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,OnClick" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20sp"
+        android:layout_marginBottom="10dp"
+        android:onClick="addData"
+        android:text="Add"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        android:textColor="#1BC34A"
+        android:backgroundTint="#154865"
+        tools:ignore="HardcodedText,OnClick" />
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="10dp"
+        android:onClick="showData"
+        android:text="Show"
+        android:textSize="16sp"
+        android:textColor="#1BC34A"
+        android:backgroundTint="#154865"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText,OnClick"/>
+
+    <Button
+        android:id="@+id/btnDel"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="9dp"
+        android:layout_toStartOf="@+id/btnView"
+        android:layout_toEndOf="@+id/btnAdd"
+        android:textColor="#1BC34A"
+        android:backgroundTint="#154865"
+        android:onClick="onDelete"
+        android:text="Delete"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        tools:ignore="HardcodedText,OnClick"/>
+
+</RelativeLayout>
